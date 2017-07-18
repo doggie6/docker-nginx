@@ -1,0 +1,11 @@
+upstream nexus3 {
+  server xx.xx.xx.xx:8081;
+}
+
+server {
+  server_name nexus3;
+
+  location / {
+    proxy_pass http://nexus3;
+  }
+}
